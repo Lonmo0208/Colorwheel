@@ -15,13 +15,13 @@ allprojects {
     version = rootProject.mod_version + "+mc" + rootProject.minecraft_version
 
     configurations.configureEach {
-        resolutionStrategy.force "org.lwjgl:lwjgl-stb:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl-opengl:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl-openal:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl-tinyfd:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl-jemalloc:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl-glfw:3.3.1"
-        resolutionStrategy.force "org.lwjgl:lwjgl:3.3.1"
+        resolutionStrategy.force "org.lwjgl:lwjgl-stb:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl-opengl:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl-openal:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl-tinyfd:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl-jemalloc:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl-glfw:3.3.3"
+        resolutionStrategy.force "org.lwjgl:lwjgl:3.3.3"
     }
 }
 
@@ -36,6 +36,9 @@ subprojects {
     }
 
     repositories {
+        flatDir(
+                dirs: 'libs'
+        )
         maven { url = "https://maven.parchmentmc.org" }
         maven { url = "https://api.modrinth.com/maven" }
         maven { url = "https://maven.createmod.net" }
